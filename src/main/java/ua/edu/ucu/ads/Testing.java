@@ -37,7 +37,7 @@ public class Testing extends BaseTest {
             exit();
         }
         
-        query = em.createQuery("select mr from MedicalRecord mr where mr.type = \"type\"");
+        query = em.createQuery("select mr from MedicalRecord mr where mr.type = \"exam\"");
         result = query.getResultList();
         if (!result.isEmpty()) {
             System.out.println("FAIL : MedicalRecord is selected with unexisting type!");
